@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>石家庄正信养老评估服务中心</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C8102E',
+                        secondary: '#1A1A1A',
+                        accent: '#F5F5F5',
+                    },
+                    fontFamily: {
+                        sans: ['PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            }
+            .hover-up {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .hover-up:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-secondary">
+    <!-- 导航栏 -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/95 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <svg class="w-12 h-12" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 5L61.8 38.2L97.5 38.2L68.9 58.8L79.5 92L50 71.5L20.5 92L31.1 58.8L2.5 38.2L38.2 38.2L50 5Z" fill="#C8102E"/>
+                        <path d="M50 5L61.8 38.2L50 38.2L50 71.5L20.5 92L31.1 58.8L2.5 38.2L38.2 38.2L50 5Z" fill="#F8B195" fill-opacity="0.8"/>
+                    </svg>
+                    <div>
+                        <div class="text-2xl font-bold text-primary">正信评估</div>
+                        <div class="text-xs text-gray-500 tracking-wider">ZHENGXIN ASSESS</div>
+                    </div>
+                </div>
+                
+                <!-- 桌面导航 -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary transition-colors font-medium">首页</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary transition-colors font-medium">关于我们</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary transition-colors font-medium">核心服务</a>
+                    <a href="#advantages" class="text-gray-700 hover:text-primary transition-colors font-medium">核心优势</a>
+                    <a href="#contact" class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-primary/90 transition-colors font-medium">联系我们</a>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menuBtn" class="md:hidden text-gray-700">
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-primary">首页</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-primary">关于我们</a>
+                <a href="#services" class="block py-2 text-gray-700 hover:text-primary">核心服务</a>
+                <a href="#advantages" class="block py-2 text-gray-700 hover:text-primary">核心优势</a>
+                <a href="#contact" class="block py-2 text-primary font-medium">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <section id="home" class="relative min-h-screen flex items-center bg-gradient-to-br from-primary/5 to-primary/10 pt-20">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                        <i class="fa fa-star mr-2"></i>
+                        专业第三方评估机构
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                        石家庄正信<br>
+                        <span class="text-primary">养老评估服务中心</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 leading-relaxed max-w-xl">
+                        秉持"公正、专业、科学、严谨"的服务宗旨，致力于为政府、社会及老年人群体提供全方位、精准化的养老服务评估与咨询服务。
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#services" class="bg-primary text-white px-8 py-4 rounded-full hover:bg-primary/90 transition-all shadow-lg shadow-primary/25 font-medium">
+                            了解服务
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#contact" class="border-2 border-primary text-primary px-8 py-4 rounded-full hover:bg-primary hover:text-white transition-all font-medium">
+                            立即咨询
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-8 pt-4">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary">18+</div>
+                            <div class="text-sm text-gray-500">服务区县</div>
+                        </div>
+                        <div class="w-px h-12 bg-gray-200"></div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary">1000+</div>
+                            <div class="text-sm text-gray-500">评估案例</div>
+                        </div>
+                        <div class="w-px h-12 bg-gray-200"></div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary">100%</div>
+                            <div class="text-sm text-gray-500">客户满意度</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative hidden md:block">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-primary/20 rounded-3xl transform rotate-6"></div>
+                        <div class="relative bg-white rounded-3xl shadow-2xl p-8">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="bg-accent p-6 rounded-2xl text-center hover-up">
+                                    <i class="fa fa-user-circle-o text-4xl text-primary mb-3"></i>
+                                    <div class="font-semibold">老年人能力评估</div>
+                                </div>
+                                <div class="bg-accent p-6 rounded-2xl text-center hover-up">
+                                    <i class="fa fa-home text-4xl text-primary mb-3"></i>
+                                    <div class="font-semibold">适老化改造验收</div>
+                                </div>
+                                <div class="bg-accent p-6 rounded-2xl text-center hover-up">
+                                    <i class="fa fa-building text-4xl text-primary mb-3"></i>
+                                    <div class="font-semibold">养老设施验收</div>
+                                </div>
+                                <div class="bg-accent p-6 rounded-2xl text-center hover-up">
+                                    <i class="fa fa-certificate text-4xl text-primary mb-3"></i>
+                                    <div class="font-semibold">机构等级评定</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+                    关于我们
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">专业值得信赖</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">经石家庄市行政审批局批准设立，在石家庄市民政局备案的民办非企业单位，具备承接政府购买服务的完整资质</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-primary">机构概况</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        石家庄正信养老评估服务中心是经民政部门批准成立的专业性养老服务评估机构。自成立以来，中心始终秉持"公正、专业、科学、严谨"的服务宗旨，致力于为政府、社会及老年人群体提供全方位、精准化的养老服务评估与咨询服务。
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        中心于2022年成立联合党支部，始终坚持党建引领业务发展。党支部充分发挥政治核心作用，将党的先进理念融入评估标准制定、流程管理及团队建设中，确保中心各项工作沿着正确方向前进。
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">权威合规</div>
+                                <div class="text-sm text-gray-500">严格遵循国家标准</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa fa-users text-primary"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">团队专业</div>
+                                <div class="text-sm text-gray-500">资深专家团队</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa fa-flask text-primary"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">方法科学</div>
+                                <div class="text-sm text-gray-500">标准化评估工具</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa fa-balance-scale text-primary"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">立场中立</div>
+                                <div class="text-sm text-gray-500">独立第三方机构</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-primary to-primary/80 rounded-3xl p-8 text-white">
+                        <h3 class="text-xl font-bold mb-6">服务范围</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa fa-map-marker text-xl"></i>
+                                <span>石家庄市主城区及周边十几个区县</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fa fa-map-marker text-xl"></i>
+                                <span>保定阜平县（跨市服务）</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fa fa-map-marker text-xl"></i>
+                                <span>井陉县、灵寿县、行唐县等山区县域</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 pt-6 border-t border-white/20">
+                            <div class="text-sm opacity-80 mb-2">党建引领</div>
+                            <div class="text-sm">2022年成立联合党支部，坚持党建引领业务发展</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心服务 -->
+    <section id="services" class="py-24 bg-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+                    核心服务
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">全方位评估服务体系</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">覆盖老年人全生命周期、贯通居家社区机构三大场景的评估服务体系</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 服务卡片1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-up">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa fa-user-circle-o text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">老年人能力综合评估</h3>
+                    <p class="text-gray-600 mb-6">依据国家标准，开展老年人能力等级（自理、失能、失智等）评估，为养老服务补贴发放提供权威依据。</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>养老服务补贴资格评估</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>护理补贴资格评估</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>精准能力认定</li>
+                    </ul>
+                </div>
+                
+                <!-- 服务卡片2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-up">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa fa-medkit text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">长期护理保险评估</h3>
+                    <p class="text-gray-600 mb-6">承担失能等级评估初筛与现场复核工作，确保长护险待遇享受对象认定的准确性与公平性。</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>失能等级评估初筛</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>现场复核工作</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>公平公正认定</li>
+                    </ul>
+                </div>
+                
+                <!-- 服务卡片3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-up">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa fa-building text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">养老机构等级评定</h3>
+                    <p class="text-gray-600 mb-6">协助民政部门对养老机构进行标准符合性检查与服务质量监测，为行业监管与奖补政策提供参考。</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>标准符合性检查</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>服务质量监测</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>行业监管参考</li>
+                    </ul>
+                </div>
+                
+                <!-- 服务卡片4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-up">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa fa-heart text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">特殊困难老年人探访评估</h3>
+                    <p class="text-gray-600 mb-6">对空巢、留守、失能等特殊困难老年人进行需求筛查与风险等级评估，协助建立精准关爱服务台账。</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>需求筛查评估</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>风险等级评估</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>建立关爱台账</li>
+                    </ul>
+                </div>
+                
+                <!-- 服务卡片5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-up">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa fa-home text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">适老化改造验收</h3>
+                    <p class="text-gray-600 mb-6">参与特殊困难老年人家庭适老化改造项目的入户验收，确保改造实效，守护居家安全。</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>入户验收评估</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>防滑扶手安装检查</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>降低跌倒风险</li>
+                    </ul>
+                </div>
+                
+                <!-- 服务卡片6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-up">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa fa-check-square-o text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">养老设施验收与咨询</h3>
+                    <p class="text-gray-600 mb-6">承担社区示范性日间照料服务站、乡镇区域养老服务中心、养老机构的建设评估与验收评价。</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>建设评估验收</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>专业咨询服务</li>
+                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>标准化建设指导</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section id="advantages" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+                    核心优势
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">为什么选择正信评估</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">科学评估 · 数据支撑 · 风险管控 · 效能提升</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div class="flex space-x-6">
+                        <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <i class="fa fa-line-chart text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">服务中心大局</h3>
+                            <p class="text-gray-600">当好政府养老决策的"数据参谋"，为市级财政补贴发放和床位后续优化提供关键依据，成为市、县两级民政部门可信赖的第三方"外脑"。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-6">
+                        <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <i class="fa fa-balance-scale text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">优化营商环境</h3>
+                            <p class="text-gray-600">坚守第三方评估机构的独立性与公信力，严格执行"双盲"评估制度，为各类养老服务主体营造公平、透明、可预期的市场环境。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-6">
+                        <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <i class="fa fa-rocket text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">发展新质生产力</h3>
+                            <p class="text-gray-600">以标准化、数字化赋能养老服务评估，引入智能化评估工具，实现全流程电子化，评估效率提升44%。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="flex space-x-6">
+                        <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <i class="fa fa-tree text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">参与乡村振兴</h3>
+                            <p class="text-gray-600">打通农村养老服务评估"最后一公里"，深入偏远乡村开展评估，提升农村养老设施服务水平，带动农村就业与公益资源下沉。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-6">
+                        <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <i class="fa fa-smile-o text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">致力改善民生</h3>
+                            <p class="text-gray-600">精准守护每一位老年人的福祉，确保补贴应享尽享，守护居家安全，提升服务质量，让政府购买的每一分钟服务都温暖老人心。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-6">
+                        <div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <i class="fa fa-users text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">专业团队保障</h3>
+                            <p class="text-gray-600">核心团队由资深社会工作师、老年人能力评估师、康复治疗师、医护人员等专业人员组成，均经过标准化培训与认证。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-24 bg-gradient-to-br from-primary to-primary/80 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-sm font-medium mb-4">
+                    联系我们
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">期待与您合作</h2>
+                <p class="text-white/80 max-w-2xl mx-auto">如有任何评估需求或合作意向，欢迎随时联系我们</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover-up">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-phone text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">咨询热线</h3>
+                    <div class="space-y-2">
+                        <p class="text-white/90">王经理：15832170768</p>
+                        <p class="text-white/90">杨经理：13643387028</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover-up">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-map-marker text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">公司地址</h3>
+                    <p class="text-white/90">河北省石家庄市新华区<br>中华北大街37号北郡B区</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover-up">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-clock-o text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">工作时间</h3>
+                    <div class="space-y-2">
+                        <p class="text-white/90">周一至周五</p>
+                        <p class="text-white/90">9:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <svg class="w-10 h-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 5L61.8 38.2L97.5 38.2L68.9 58.8L79.5 92L50 71.5L20.5 92L31.1 58.8L2.5 38.2L38.2 38.2L50 5Z" fill="#C8102E"/>
+                            <path d="M50 5L61.8 38.2L50 38.2L50 71.5L20.5 92L31.1 58.8L2.5 38.2L38.2 38.2L50 5Z" fill="#F8B195" fill-opacity="0.8"/>
+                        </svg>
+                        <div>
+                            <div class="text-xl font-bold">正信评估</div>
+                            <div class="text-xs text-gray-400">ZHENGXIN ASSESS</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 max-w-md">
+                        石家庄正信养老评估服务中心——专业第三方评估机构，秉持"公正、专业、科学、严谨"的服务宗旨，为养老服务高质量发展贡献力量。
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">快速链接</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition-colors">首页</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">关于我们</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">核心服务</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">服务项目</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>老年人能力评估</li>
+                        <li>适老化改造验收</li>
+                        <li>养老设施验收</li>
+                        <li>机构等级评定</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2026 石家庄正信养老评估服务中心 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full shadow-lg opacity-0 invisible transition-all hover:bg-primary/90 z-50">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 移动端菜单切换
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('shadow-sm');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('shadow-sm');
+            }
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // 关闭移动端菜单
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // 返回顶部按钮
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
